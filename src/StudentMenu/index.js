@@ -4,24 +4,23 @@ import React, { Component } from 'react';
 import StudentPanel from './StudentPanel';
 import ViewPanel from './ViewPanel';
 export default class StudentMenu extends Component {
-    state = {page : "StudentMenu"};
-  render() {
-    if (this.state.page === "StudentMenu"){
+
+    state = {
+        page : "Default"
+    };
+  
+    changeState = (props) => {
+        this.setState({
+            page: props.page
+        });
+    }
+
+    render() {
         return (
             <div>
-            <StudentPanel /><ViewPanel />
-
-           
+            <StudentPanel changeState={this.changeState} /><ViewPanel currentPage={this.state.page}/>
             </div>
         );
-    }/*else if (this.state.page === "RegisterCourse"){
-        return (
-            <RegisterCourse />
-        );
-    }else if (this.state.page === "SearchCourse"){
-        return (
-            <SearchCourse />
-        );
-    }*/
+    
   }
 }

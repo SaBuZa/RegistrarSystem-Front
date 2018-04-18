@@ -1,3 +1,4 @@
+import { Navbar, Jumbotron, Button } from 'react-bootstrap';
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
@@ -7,13 +8,13 @@ import StudentMenu from './StudentMenu';
 
 class App extends Component {
   state = {
-    'page' : 'Login'
+    page : 'Login'
     //'page' : 'StudentMenu'
 
   }
   changeState = (props) => {
     this.setState({
-      'page' : props.page
+      page : props.page
     });
   }
 
