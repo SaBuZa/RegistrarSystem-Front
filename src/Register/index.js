@@ -57,7 +57,7 @@ class Register extends Component {
             <div>Sex <input  value={this.state.sex} onChange={(event) => this.onChangeInput(event, "sex")}/></div>
             <div>National ID <input  value={this.state.national_id} onChange={(event) => this.onChangeInput(event, "national_id")}/></div>
             <div>Email <input  value={this.state.email} onChange={(event) => this.onChangeInput(event, "email")}/></div>
-            <div><button onClick={() => this.onClick()}>Next</button></div>
+            <div><button className="btn btn-default" onClick={() => this.onClick()}>Next</button></div>
             </div>
         );
     }else if (this.state.pageNum === 2){
@@ -69,7 +69,7 @@ class Register extends Component {
             <div>District <input  value={this.state.district} onChange={(event) => this.onChangeInput(event, "district")}/></div>
             <div>Province <input  value={this.state.province} onChange={(event) => this.onChangeInput(event, "province")}/></div>
             <div>Postal Code <input  value={this.state.postal_code} onChange={(event) => this.onChangeInput(event, "postal_code")}/></div>
-            <div><button onClick={() => this.onClick()}>Next</button></div>
+            <div><button className="btn btn-default" onClick={() => this.onClick()}>Next</button></div>
             </div>
         );
     }else if (this.state.pageNum === 3){
@@ -89,7 +89,7 @@ class Register extends Component {
             <div>District <input  value={this.state.district} onChange={(event) => this.onChangeInput(event, "district")}/></div>
             <div>Province <input  value={this.state.province} onChange={(event) => this.onChangeInput(event, "province")}/></div>
             <div>Postal Code <input  value={this.state.postal_code} onChange={(event) => this.onChangeInput(event, "postal_code")}/></div>
-            <div><button onClick={() => this.onClick()}>Confirm</button></div>
+            <div><button className="btn btn-warning" onClick={() => this.onClick()}>Confirm</button></div>
             </div>
         );
     }

@@ -5,7 +5,7 @@ class RegisterButton extends Component {
     render() {
         console.log(this);
       return (
-        <button onClick={() => this.props.onRegisterClick({ page: 'Register' })}>
+        <button type="button" className="btn btn-info" onClick={() => this.props.onRegisterClick({ page: 'Register' })}>
         Register
         </button>
       );

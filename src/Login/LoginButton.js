@@ -4,7 +4,7 @@ class LoginButton extends Component {
 
     render() {
         return (
-            <button onClick = {() => this.props.onLoginClick({ page:'StudentMenu'})}>
+            <button className="btn btn-success" onClick = {() => this.props.onLoginClick({ page:'StudentMenu'})}>
             Login
             </button>
         );
