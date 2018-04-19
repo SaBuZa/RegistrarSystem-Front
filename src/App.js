@@ -5,6 +5,7 @@ import './App.css';
 import Login from './Login';
 import Register from  './Register';
 import StudentMenu from './StudentMenu';
+import TeacherMenu from './TeacherMenu';
 
 class App extends Component {
   state = {
@@ -21,7 +22,7 @@ class App extends Component {
   render() {
     if (this.state.page === 'Login'){
       return (
-        <Login changeState={this.changeState} />  
+        <Login changeState={this.changeState} loginType={this.state}/>  
       );
     }else if (this.state.page === 'Register'){
       return (
@@ -30,6 +31,10 @@ class App extends Component {
     }else if (this.state.page === 'StudentMenu'){
       return (
         <StudentMenu />
+      );
+    }else if (this.state.page === 'TeacherMenu'){
+      return (
+        <TeacherMenu />
       );
     }
   }

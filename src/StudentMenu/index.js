@@ -9,7 +9,7 @@ export default class StudentMenu extends Component {
         page : "Default"
     };
   
-    changeState = (props) => {
+    changeState = (props) => {  
         this.setState({
             page: props.page
         });
