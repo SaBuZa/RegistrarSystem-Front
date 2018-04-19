@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import TeacherPanel from './TeacherPanel';
+import ViewPanel from './ViewPanel';
 
 export default class TeacherMenu extends Component {
 
@@ -15,7 +17,7 @@ export default class TeacherMenu extends Component {
     render() {
         return (
             <div>
-            "Teacher Menu"
+            <TeacherPanel/><ViewPanel/>
             </div>
         );
     
