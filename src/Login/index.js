@@ -6,7 +6,7 @@ import LoginTypeRadio from  './LoginTypeRadio';
 class Login extends Component {
   
   state = {
-    selectedType : "None"
+    selectedType : "StudentChosen"
   }
 
   onLoginTypeChange = (props) => {
