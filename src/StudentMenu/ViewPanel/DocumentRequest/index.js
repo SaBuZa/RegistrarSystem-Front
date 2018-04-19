@@ -4,7 +4,7 @@ export default class DocumentRequest extends Component {
     render() {
         return (
             <div>
-            <div>ลงทะเบียนรายวิชา</div>
+            <div>ขอใบรับรอง</div>
             <div> Course ID &emsp; Section </div>
             <div><input></input> </div>
             </div>
