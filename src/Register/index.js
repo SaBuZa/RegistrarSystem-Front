@@ -22,7 +22,7 @@ class Register extends Component {
         postal_code: "Postal Code "
     };
     onSubmit = () => {
-        /*axios.get('http://128.199.97.10:3000/coworking/coworkinglist').then((res) => {
+        /*axios.get('http://localhost:3000/studentinfo?userid=0').then((res) => {
             console.log(res);
         })
         */
