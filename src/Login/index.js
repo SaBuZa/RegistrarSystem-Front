@@ -55,11 +55,18 @@ class Login extends Component {
     })
     .then((res) => {
       
-      console.log("Yayyyyyyyyyyyyyyyyy");
+      //console.log("Yayyyyyyyyyyyyyyyyy");
       //console.log(res.data);
-      this.setState({data:res.data});
+      //console.log(res.headers['content-type']);
+      //console.log(res.headers['content-type']==="application/json; charset=utf-8");
+      //if (res.headers.type === '')
+      //this.setState({data:res.data});
       //if (res.)
-      this.props.changeState({page : targetPage});
+      if (res.headers['content-type']==="application/json; charset=utf-8"){
+        this.props.changeState({page : targetPage});
+      }else{
+        console.log("Login Failed !");
+      }
     })
     .catch((err) => {
         console.log(err);
