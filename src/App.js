@@ -9,8 +9,8 @@ import TeacherMenu from './TeacherMenu';
 
 class App extends Component {
   state = {
-    page : ''
-    //page : 'Login'
+    page : 'Login'
+    //page : ''
     //'page' : 'StudentMenu'
 
   }
@@ -40,7 +40,7 @@ class App extends Component {
       );
     }else{
       return (
-        <button onClick= {() => {this.setState({page : 'Login'})}} > BUTTON </button>
+        <button onClick= {() => {this.setState({page : 'Login'})}} > LOGIN </button>
       )
     }
   }

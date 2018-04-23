@@ -49,31 +49,30 @@ class Login extends Component {
     //console.log(targetPage);
     //this.onSubmit();
     axios.post('http://localhost:3000/main',{
-        id : document.getElementById('username').value,
-        password : document.getElementById('password').value,
-        usertype : this.state.selectedType
+      id : document.getElementById('username').value,
+      password : document.getElementById('password').value,
+      usertype : this.state.selectedType
     })
     .then((res) => {
-        console.log("Yayyyyyyyyyyyyyyyyy");
-        console.log(res.data);
-        this.setState({data:res.data});
-        //if (res.)
-        this.props.changeState({page : targetPage});
+      
+      console.log("Yayyyyyyyyyyyyyyyyy");
+      //console.log(res.data);
+      this.setState({data:res.data});
+      //if (res.)
+      this.props.changeState({page : targetPage});
     })
     .catch((err) => {
         console.log(err);
     });
-
   }
   
   render() {
-    console.log(this.state.data);
+    //console.log(this.state.data);
     //console.log(this.state.selectedType);
     //<LoginButton onLoginClick={this.handleLogin} selectedType={this.state.selectedType}/>
     return (
       <div>
 
-        <form>
           <div>Login</div>
           <LoginTypeRadio onTypeChange={this.onLoginTypeChange} />
 
@@ -89,7 +88,6 @@ class Login extends Component {
             <RegisterButton onRegisterClick={this.props.changeState} />
             <LoginButton onLoginClick={this.handleLogin} />
           </div>
-        </form>
       </div>
     );
   }
