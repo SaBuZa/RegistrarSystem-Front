@@ -9,7 +9,8 @@ import TeacherMenu from './TeacherMenu';
 
 class App extends Component {
   state = {
-    page : 'Login'
+    page : ''
+    //page : 'Login'
     //'page' : 'StudentMenu'
 
   }
@@ -20,6 +21,7 @@ class App extends Component {
   }
 
   render() {
+    console.log(this.state.page);
     if (this.state.page === 'Login'){
       return (
         <Login changeState={this.changeState} loginType={this.state}/>  
@@ -36,6 +38,10 @@ class App extends Component {
       return (
         <TeacherMenu />
       );
+    }else{
+      return (
+        <button onClick= {() => {this.setState({page : 'Login'})}} > BUTTON </button>
+      )
     }
   }
 }

@@ -27,6 +27,19 @@ class Register extends Component {
         })
         */
 
+        /*
+        axios.post('http://localhost:3000/main',{
+            id : this.state.username,
+            password : this.state.password,
+            usertype : this.state.mode
+        })
+        .then((res) => {
+            console.log(res);
+        })
+        .catch((err) => {
+            console.log(err);
+        });
+        */
     }
 
     onClick = () => {
@@ -44,6 +57,8 @@ class Register extends Component {
         input[inputType] = event.target.value;
         this.setState(input); 
     }
+
+
 
   render() {
     if (this.state.pageNum === 1){
@@ -89,7 +104,7 @@ class Register extends Component {
             <div>District <input  value={this.state.district} onChange={(event) => this.onChangeInput(event, "district")}/></div>
             <div>Province <input  value={this.state.province} onChange={(event) => this.onChangeInput(event, "province")}/></div>
             <div>Postal Code <input  value={this.state.postal_code} onChange={(event) => this.onChangeInput(event, "postal_code")}/></div>
-            <div><button className="btn btn-warning" onClick={() => this.onClick()}>Confirm</button></div>
+            <div><button className="btn btn-warning" onClick={() => this.onSubmit()}>Confirm</button></div>
             </div>
         );
     }

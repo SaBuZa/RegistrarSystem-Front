@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 export default class LoginTypeRadio extends Component {
     
     state = {
-        selectedType : "StudentChosen"
+        selectedType : "Student"
     };
 
     handleTypeChange = (e) => {
@@ -22,10 +22,10 @@ export default class LoginTypeRadio extends Component {
         return (
             <div>
                 <div className="radio-inline">
-                <label><input type="radio" name="typeRadio" value="StudentChosen" checked={this.state.selectedType==="StudentChosen"} onChange={this.handleTypeChange} />Student</label>
+                <label><input type="radio" name="typeRadio" value="Student" checked={this.state.selectedType==="Student"} onChange={this.handleTypeChange} />Student</label>
                 </div>
                 <div className="radio-inline">
-                <label><input type="radio" name="typeRadio" value="TeacherChosen" checked={this.state.selectedType==="TeacherChosen"} onChange={this.handleTypeChange} />Teacher</label>
+                <label><input type="radio" name="typeRadio" value="Teacher" checked={this.state.selectedType==="Teacher"} onChange={this.handleTypeChange} />Teacher</label>
                 </div>
             </div>
             
