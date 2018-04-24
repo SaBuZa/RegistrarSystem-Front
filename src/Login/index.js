@@ -48,13 +48,13 @@ class Login extends Component {
     
     //console.log(targetPage);
     //this.onSubmit();
-    axios.post('http://localhost:3000/main',{
+    axios.post('/main',{
       id : document.getElementById('username').value,
       password : document.getElementById('password').value,
       usertype : this.state.selectedType
     })
     .then((res) => {
-      
+      console.log(res);
       //console.log("Yayyyyyyyyyyyyyyyyy");
       //console.log(res.data);
       //console.log(res.headers['content-type']);
@@ -62,7 +62,8 @@ class Login extends Component {
       //if (res.headers.type === '')
       //this.setState({data:res.data});
       //if (res.)
-      if (res.headers['content-type']==="application/json; charset=utf-8"){
+      //if (res.headers['content-type']==="application/json; charset=utf-8"){
+      if (res.status===200){  
         this.props.changeState({page : targetPage});
       }else{
         console.log("Login Failed !");

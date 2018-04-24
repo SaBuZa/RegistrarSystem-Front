@@ -25,7 +25,7 @@ export default class SearchCourse extends Component{
             console.log(res);
         })
         */
-       var qstring = 'http://localhost:3000/courseinfo?course_id=';
+       var qstring = '/courseinfo?course_id=';
        qstring = qstring + this.state.courseID;
         console.log(qstring);
        axios.get(qstring).then((res) => {
