@@ -8,17 +8,18 @@ export default class CourseTable extends Component {
             return null;
         }else{
             let myData = this.props.data.data;
+            console.log(myData);
+            let row = myData[0];
             
             return (
                 <div>
                     <table>
                         <thead>
-                            <th>ข้อมูลนักศึกษา</th>
+                            <tr>
+                                <th>ข้อมูลนักศึกษา</th>
+                            </tr>
                         </thead>
                         <tbody>
-                            {
-                                myData.map(row => (
-                                    <div>
                                         <tr>
                                             <th>StudentID : </th>
                                             <td>{row.StudentID}</td>
@@ -74,10 +75,7 @@ export default class CourseTable extends Component {
                                         <tr>
                                             <th>Postal Code : </th>
                                             <td>{row.PostalCode}</td>
-                                        </tr>   
-                                    </div>                                 
-                                ))
-                            }
+                                        </tr>       
                         </tbody>
                     </table>
                 </div>
