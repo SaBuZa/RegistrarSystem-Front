@@ -5,7 +5,6 @@ import InfoTable from './InfoTable';
 
 export default class SearchCourse extends Component{
     state = {
-        courseID : '',
         data : null
     }
 

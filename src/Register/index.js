@@ -21,6 +21,38 @@ class Register extends Component {
         province: "Province ",
         postal_code: "Postal Code "
     };
+
+
+    handleSubmit = () => {
+    
+        var targetPage = '';
+        
+        axios.post('/register',{
+          StudentID : document.getElementById('username').value,
+          Sec : document.getElementById('password').value,
+          usertype : this.state.selectedType
+        })
+        .then((res) => {
+          console.log(res);
+          //console.log("Yayyyyyyyyyyyyyyyyy");
+          //console.log(res.data);
+          //console.log(res.headers['content-type']);
+          //console.log(res.headers['content-type']==="application/json; charset=utf-8");
+          //if (res.headers.type === '')
+          //this.setState({data:res.data});
+          //if (res.)
+          //if (res.headers['content-type']==="application/json; charset=utf-8"){
+          if (res.status===200){  
+            this.props.changeState({page : targetPage});
+          }else{
+            console.log("Login Failed !");
+          }
+        })
+        .catch((err) => {
+            console.log(err);
+        });
+      }
+
     onSubmit = () => {
         /*axios.get('http://localhost:3000/studentinfo?userid=0').then((res) => {
             console.log(res);
