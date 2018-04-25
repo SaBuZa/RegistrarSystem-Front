@@ -1,4 +1,6 @@
 import { Navbar, Jumbotron, Button } from 'react-bootstrap';
+import {BrowserRouter,Route,Switch} from 'react-router-dom';
+
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
@@ -21,6 +23,7 @@ class App extends Component {
   }
 
   render() {
+
     console.log(this.state.page);
     if (this.state.page === 'Login'){
       return (
@@ -32,7 +35,7 @@ class App extends Component {
       );
     }else if (this.state.page === 'StudentMenu'){
       return (
-        <StudentMenu />
+        <StudentMenu changePage={this.changeState} />
       );
     }else if (this.state.page === 'TeacherMenu'){
       return (

@@ -18,7 +18,7 @@ export default class StudentMenu extends Component {
     render() {
         return (
             <div>
-            <StudentPanel changeState={this.changeState} /><ViewPanel currentPage={this.state.page}/>
+            <StudentPanel changePage={this.props.changePage} changeState={this.changeState} /><ViewPanel currentPage={this.state.page}/>
             </div>
         );
     

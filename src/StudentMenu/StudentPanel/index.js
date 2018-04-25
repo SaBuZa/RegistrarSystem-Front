@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import LogoutButton from './LogoutButton';
+
 export default class StudentPanel extends Component {
 
     render(){
@@ -14,6 +16,7 @@ export default class StudentPanel extends Component {
             <div><button className="btn btn-default" onClick={ () =>{ this.props.changeState({page:'GraduationRequest'})}}>ขอจบการศึกษา</button></div>
             <div><button className="btn btn-default" onClick={ () =>{ this.props.changeState({page:'RegistrationInformation'})}}>ตรวจสอบผลการลงทะเบียน</button></div>
             <div><button className="btn btn-default" onClick={ () => this.props.changeState({page:'SearchCourse'})}>ค้นหารายวิชา</button></div>
+            <LogoutButton changePage={this.props.changePage} />
             </div>
         );
     }
