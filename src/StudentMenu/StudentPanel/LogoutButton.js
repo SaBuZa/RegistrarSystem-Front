@@ -16,7 +16,9 @@ class LogoutButton extends Component {
         })
         .then((res) => {
             if (res.data['logoutSuccess'] ===  true){
-                this.setState({redirect : true});
+                this.props.changePage({page:'Login'});
+                return ;
+                //this.setState({redirect : true});
             }else{
                 console.log("Logout Failed !");
                 return ;
@@ -30,16 +32,14 @@ class LogoutButton extends Component {
     }
 
     render() {
-        if (this.state.redirect){
+        /*if (this.state.redirect){
             this.props.changePage({page:'Login'});
-            console.log("Logout Success ! Redirect to Login Page !");
-        } 
-        
+            //console.log("Logout Success ! Redirect to Login Page !");
+        } */
         return (
             <button className="btn btn-danger" onClick={this.handleLogout}>
             Logout
             </button>
-
         );
         
     }

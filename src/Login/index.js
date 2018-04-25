@@ -48,7 +48,7 @@ class Login extends Component {
     
     //console.log(targetPage);
     //this.onSubmit();
-    axios.post('/main',{
+    axios.post('/login',{
       id : document.getElementById('username').value,
       password : document.getElementById('password').value,
       usertype : this.state.selectedType

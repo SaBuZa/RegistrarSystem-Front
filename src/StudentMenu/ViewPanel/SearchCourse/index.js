@@ -5,7 +5,7 @@ import CourseTable from './CourseTable';
 
 export default class SearchCourse extends Component{
     state = {
-        courseID : null,
+        courseID : '',
         data : null
     }
 
