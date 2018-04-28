@@ -15,17 +15,16 @@ export default class ExamInfo extends Component{
 
     }
 
+    componentDidMount = () => {
+        this.onSubmit();
+
+    }
     onQueried = (res) => {
-        //console.log(JSON.parse(res));
         this.setState({data:res});
     }
 
     onSubmit = () => {
-        /*axios.get('http://localhost:3000/studentinfo?userid=0').then((res) => {
-            console.log(res);
-        })
-        */
-       var qstring = '/courseinfo?course_id=';
+       var qstring = '/classtime';
        qstring = qstring + this.state.courseID;
         console.log(qstring);
        axios.get(qstring).then((res) => {
@@ -37,15 +36,14 @@ export default class ExamInfo extends Component{
     render(){
         return (
             <div>
-                <div> ค้นหารายวิชา </div>
-                <div> <input id="courseIDsearchBox" type="text" onChange={(event) => {this.setState({courseID : event.target.value})}} placeholder="Search . . ." /> </div>
-                <button className="btn btn-success" onClick={this.onSubmit}>Search</button>
+                <div> ตารางสอบ </div>
 
                 <ExamTimetable data={this.state.data}/>
             </div>
         )
 
     }
+
 
 
 }

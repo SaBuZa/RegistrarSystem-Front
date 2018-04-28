@@ -20,7 +20,7 @@ export default class ManageCourse extends Component {
     }
     
     queryInfo = () => {
-        var qstring = '/viewregister';
+        var qstring = '/viewregistercurrent';
         axios.get(qstring)
         .then((res) => {
             this.onQueried(res);
@@ -33,7 +33,6 @@ export default class ManageCourse extends Component {
             <div>เพิ่ม ลด ถอน รายวิชา</div>
             <CourseInfoTable data={this.state.data}/>
             <CourseManager />
-            <div><input></input> </div>
             </div>
 
 

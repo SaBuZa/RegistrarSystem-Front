@@ -6,13 +6,9 @@ import CourseTable from './CourseTable';
 export default class SearchCourse extends Component{
     state = {
         courseID : '',
+        year : '',
+        semNo: '',
         data : null
-    }
-
-    onChangeInput = (event, inputName) => {
-
-
-
     }
 
     onQueried = (res) => {
@@ -27,6 +23,9 @@ export default class SearchCourse extends Component{
         */
        var qstring = '/courseinfo?course_id=';
        qstring = qstring + this.state.courseID;
+       qstring = qstring + '&year=' + this.state.year;
+       qstring = qstring + '&semNo=' + this.state.semNo;
+
         console.log(qstring);
        axios.get(qstring).then((res) => {
         //console.log(res);
@@ -38,7 +37,9 @@ export default class SearchCourse extends Component{
         return (
             <div>
                 <div> ค้นหารายวิชา </div>
-                <div> <input id="courseIDsearchBox" type="text" onChange={(event) => {this.setState({courseID : event.target.value})}} placeholder="Search . . ." /> </div>
+                <div> <input id="courseIDSearchBox" type="text" onChange={(event) => {this.setState({courseID : event.target.value})}} placeholder="Couse ID . . ." /> </div>
+                <div> <input id="yearSearchBox" type="text" onChange={(event) => {this.setState({year : event.target.value})}} placeholder="Year . . ." /> </div>
+                <div> <input id="semNoSearchBox" type="text" onChange={(event) => {this.setState({semNo : event.target.value})}} placeholder="Semester . . ." /> </div>
                 <button className="btn btn-success" onClick={this.onSubmit}>Search</button>
 
                 <CourseTable data={this.state.data}/>

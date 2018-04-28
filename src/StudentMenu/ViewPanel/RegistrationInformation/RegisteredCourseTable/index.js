@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default class ClassTimetable extends Component {
+export default class RegisteredCourseTable extends Component {
 
     render() {
         
