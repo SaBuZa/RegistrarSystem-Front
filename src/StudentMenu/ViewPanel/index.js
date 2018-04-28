@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import ClassInformation from './ClassInformation';
+import ExamInformation from  './ExamInformation';
 import StudentInformation from './StudentInformation';
 import RegisterCourse from './RegisterCourse';
 import ManageCourse from './ManageCourse';
@@ -24,6 +26,14 @@ export default class ViewPanel extends Component {
         }else if (this.props.currentPage === 'ManageCourse'){
             return (
                 <ManageCourse />
+            )
+        }else if (this.props.currentPage === 'ClassInformation'){
+            return (
+                <ClassInformation />
+            )
+        }else if (this.props.currentPage === 'ExamInformation'){
+            return (
+                <ExamInformation />
             )
         }else if (this.props.currentPage === 'GradeInformation'){
             return (
