@@ -1,16 +1,18 @@
 import React, { Component } from 'react';
 
 export default class ClassTimetable extends Component {
-   
+    state = {
+        pageCode : ""
+    }
     render() {
         
         if (this.props.data === null){
             return null;
         }else{
             let myData = this.props.data.data;
-          
+            /*
             return (
-                <div>
+                <div className=".table-bordered">
                     <table>
                         <thead>
                         </thead>
@@ -31,7 +33,34 @@ export default class ClassTimetable extends Component {
                         </tbody>
                     </table>
                 </div>
+            );*/
+            return (
+                <div className="container">
+                    <table className="table table-bordered">
+                        <thead>
+                        </thead>
+                        <tbody>
+                            {
+
+                                myData.map(row => (
+                                    <tr>
+                                        <td>
+                                        <div>Course ID : {row.CourseID}</div>
+                                        <div>Section : {row.SecNo}</div>
+                                        <div>Day : {row.day}</div>
+                                        <div>Time : {row.startTime} - {row.endTime}</div>
+                                        <div>Building : {row.Bcode} </div>
+                                        <div>Floor : {row.Floor} </div>
+                                        <div>Room : {row.RoomNo} </div>
+                                        </td>
+                                    </tr>
+                                ))
+                            }
+                        </tbody>
+                    </table>
+                </div>
             );
+
         }
     }
 }
