@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
 export default class ClassTimetable extends Component {
-    state = {
-        pageCode : ""
-    }
+
+    dayMap = ['','SUN','MON','TUE','WED','THU','FRI','SAT'];
+
     render() {
         
         if (this.props.data === null){
@@ -47,7 +47,7 @@ export default class ClassTimetable extends Component {
                                         <td>
                                         <div>Course ID : {row.CourseID}</div>
                                         <div>Section : {row.SecNo}</div>
-                                        <div>Day : {row.day}</div>
+                                        <div>Day : {this.dayMap[row.day]}</div>
                                         <div>Time : {row.startTime} - {row.endTime}</div>
                                         <div>Building : {row.Bcode} </div>
                                         <div>Floor : {row.Floor} </div>
