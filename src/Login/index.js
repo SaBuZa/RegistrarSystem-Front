@@ -95,12 +95,12 @@ class Login extends Component {
               <input id="password" type="password" className="form-control" name="password" placeholder="Password"></input>
             </div>
             <div>
-              <RegisterButton onRegisterClick={this.props.changeState} />
               <LoginButton onLoginClick={this.handleLogin} />
             </div>
           </div>
       </div>
     );
+    //<RegisterButton onRegisterClick={this.props.changeState} />
   }
 }
 
