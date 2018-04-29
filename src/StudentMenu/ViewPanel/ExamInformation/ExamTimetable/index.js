@@ -24,7 +24,7 @@ export default class ExamTimetable extends Component{
                                         <td>
                                         <div>Course ID : {row.CourseID}</div>
                                         <div>Course Name : {row.CourseName}</div>
-                                        <div>Date : {this.dayMap[row.date]}</div>
+                                        <div>Date : {row.date}</div>
                                         <div>Time : {row.startTime} - {row.endTime}</div>
                                         <div>Building : {row.Bcode} </div>
                                         <div>Floor : {row.Floor} </div>
