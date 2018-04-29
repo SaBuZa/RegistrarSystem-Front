@@ -1,15 +1,11 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-import RegisteredCourseTable from './RegisteredCourseTable';
+import CommentTable from './CommentTable';
 
-export default class RegistrationInformation extends Component {
+export default class CommentInformation extends Component {
 
     state = {
-        courseID : '',
-        courseName : '',
-        year : '',
-        semNo: '',
         data : null
     }
 
@@ -17,12 +13,13 @@ export default class RegistrationInformation extends Component {
         this.queryInfo();
     }
 
+
     onQueried = (res) => {
         this.setState({data:res});
     }
     
     queryInfo = () => {
-        var qstring = '/viewregister';
+        var qstring = '/commentlist';
         axios.get(qstring)
         .then((res) => {
             this.onQueried(res);
@@ -32,9 +29,8 @@ export default class RegistrationInformation extends Component {
     render() {
         return (
             <div>
-                <div>ตรวจสอบผลการลงทะเบียน</div>
-                <RegisteredCourseTable data={this.state.data}/>
-                
+            <div>รายวิชาที่ต้องประเมิน</div>
+            <CommentTable data={this.state.data}/>
             </div>
 
 

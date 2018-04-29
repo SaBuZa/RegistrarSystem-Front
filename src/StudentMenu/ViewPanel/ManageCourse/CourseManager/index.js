@@ -14,7 +14,7 @@ export default class CourseManager extends Component {
 
     onSubmit = () => {
        var qstring = '/drop?';
-
+        qstring = qstring + 'course_id=' + this.state.courseID;
         console.log(qstring);
        axios.get(qstring).then((res) => {
         //console.log(res);

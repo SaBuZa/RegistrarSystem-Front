@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default class CourseInfoTable extends Component {
+export default class CommentTable extends Component {
 
     render() {
         
@@ -17,8 +17,10 @@ export default class CourseInfoTable extends Component {
                                 <th>CourseID</th>
                                 <th>CourseName</th>
                                 <th>Section</th>
-                                <th>Year</th>
-                                <th>SemesterNo</th>
+                                <th>Instructor ID</th>
+                                <th>Title</th>
+                                <th>First Name</th>
+                                <th>Last Name</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -28,8 +30,10 @@ export default class CourseInfoTable extends Component {
                                         <td>{row.CourseID}</td>
                                         <td>{row.CourseName}</td>
                                         <td>{row.SecNo}</td>
-                                        <td>{row.Year}</td>
-                                        <td>{row.SemesterNo}</td>
+                                        <td>{row.InstID}</td>
+                                        <td>{row.Title}</td>
+                                        <td>{row.FirstName}</td>
+                                        <td>{row.LastName}</td>
                                     </tr>
                                 ))
                             }

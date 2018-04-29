@@ -9,6 +9,7 @@ import TranscriptRequest from './TranscriptRequest';
 import DocumentRequest from './DocumentRequest';
 import GraduationRequest from './GraduationRequest';
 import RegistrationInformation from './RegistrationInformation';
+import CourseComment from './CourseComment';
 import SearchCourse from './SearchCourse';
 
 export default class ViewPanel extends Component {
@@ -55,6 +56,10 @@ export default class ViewPanel extends Component {
             return (
                 <RegistrationInformation />
             )
+        }else if (this.props.currentPage === 'CourseComment'){
+            return (
+                <CourseComment />
+            )
         }else if (this.props.currentPage === 'SearchCourse'){
             return (
                 <SearchCourse />
@@ -62,7 +67,6 @@ export default class ViewPanel extends Component {
         }else{
             return (
                 <div>
-                "NANI ?"
                 </div>
             );
         }
