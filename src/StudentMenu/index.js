@@ -3,6 +3,9 @@ import React, { Component } from 'react';
 //import SearchCourse from './SearchCourse';
 import StudentPanel from './StudentPanel';
 import ViewPanel from './ViewPanel';
+
+import './StudentMenu.css';
+
 export default class StudentMenu extends Component {
 
     state = {
@@ -17,8 +20,10 @@ export default class StudentMenu extends Component {
 
     render() {
         return (
-            <div>
-            <StudentPanel changePage={this.props.changePage} changeState={this.changeState} /><ViewPanel currentPage={this.state.page}/>
+            <div className="flex-container">
+                
+                <div> <StudentPanel changePage={this.props.changePage} changeState={this.changeState} /> </div>
+                <div> <ViewPanel currentPage={this.state.page}/> </div>
             </div>
         );
     
