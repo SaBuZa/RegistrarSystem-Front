@@ -16,10 +16,12 @@ export default class CourseTable extends Component {
                             <tr>
                                 <th>CourseID</th>
                                 <th>CourseName</th>
-                                <th>Credit</th>
-                                <th>Year</th>
-                                <th>SemesterNo</th>
-                                <th>ProgramCode</th>
+                                <th>Section</th>
+                                <th>Time</th>
+                                <th>Building</th>
+                                <th>Floor</th>
+                                <th>Room</th>
+                                <th>Student</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -28,10 +30,12 @@ export default class CourseTable extends Component {
                                     <tr>
                                         <td>{row.CourseID}</td>
                                         <td>{row.CourseName}</td>
-                                        <td>{row.Credit}</td>
-                                        <td>{row.Year}</td>
-                                        <td>{row.SemesterNo}</td>
-                                        <td>{row.ProgramCode}</td>
+                                        <td>{row.SecNo}</td>
+                                        <td>{row.startTime} - {row.endTime}</td>
+                                        <td>{row.Bcode}</td>
+                                        <td>{row.Floor}</td>
+                                        <td>{row.RoomNo}</td>
+                                        <td>{row.registeredStudent}/{row.MaxStudent}</td>
                                     </tr>
                                 ))
                             }

@@ -9,11 +9,6 @@ export default class ClassInformation extends Component{
         data : null
     }
 
-    onChangeInput = (event, inputName) => {
-
-
-
-    }
 
     componentDidMount = () => {
         this.onSubmit();
@@ -25,7 +20,6 @@ export default class ClassInformation extends Component{
 
     onSubmit = () => {
        var qstring = '/classtime';
-       qstring = qstring + this.state.courseID;
         console.log(qstring);
        axios.get(qstring).then((res) => {
         //console.log(res);

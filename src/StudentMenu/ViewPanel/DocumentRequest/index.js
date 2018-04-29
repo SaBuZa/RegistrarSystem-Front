@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
+import CertTable from './CertTable';
+
 export default class DocumentRequest extends Component {
 
     state = {
@@ -28,8 +30,7 @@ export default class DocumentRequest extends Component {
         return (
             <div>
             <div>ขอใบรับรอง</div>
-            <div> Course ID &emsp; Section </div>
-            <div><input></input> </div>
+            <CertTable data={this.state.data}/>
             </div>
 
 

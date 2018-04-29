@@ -16,10 +16,9 @@ export default class CourseInfoTable extends Component {
                             <tr>
                                 <th>CourseID</th>
                                 <th>CourseName</th>
-                                <th>Credit</th>
+                                <th>Section</th>
                                 <th>Year</th>
                                 <th>SemesterNo</th>
-                                <th>ProgramCode</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -28,10 +27,9 @@ export default class CourseInfoTable extends Component {
                                     <tr>
                                         <td>{row.CourseID}</td>
                                         <td>{row.CourseName}</td>
-                                        <td>{row.Credit}</td>
+                                        <td>{row.SecNo}</td>
                                         <td>{row.Year}</td>
                                         <td>{row.SemesterNo}</td>
-                                        <td>{row.ProgramCode}</td>
                                     </tr>
                                 ))
                             }

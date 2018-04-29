@@ -13,26 +13,26 @@ export default class RegistrationInformation extends Component {
         data : null
     }
 
+    componentDidMount = () =>{
+        this.queryInfo();
+    }
+
     onQueried = (res) => {
         this.setState({data:res});
     }
-
-    onSubmit = () => {
-       var qstring = '/viewregister';
-
-        console.log(qstring);
-       axios.get(qstring).then((res) => {
-        //console.log(res);
+    
+    queryInfo = () => {
+        var qstring = '/viewregister';
+        axios.get(qstring)
+        .then((res) => {
             this.onQueried(res);
-        })
+        });
     }
 
     render() {
         return (
             <div>
                 <div>ตรวจสอบผลการลงทะเบียน</div>
-                <div> Course ID &emsp; Section </div>
-
                 <RegisteredCourseTable data={this.state.data}/>
                 
             </div>

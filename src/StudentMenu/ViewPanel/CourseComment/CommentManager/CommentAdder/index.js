@@ -17,10 +17,14 @@ export default class CommentAdder extends Component {
     }
 
     onSubmit = () => {
-       var qstring = '/commentadd?';
-
-        console.log(qstring);
-       axios.get(qstring).then((res) => {
+       var qstring = '/commentadd';
+       axios.post(qstring,{
+        CourseID : this.state.courseID,
+        secNo : this.state.secNo,
+        commentText : this.state.commentText,
+        cRate : this.state.courseRating,
+        iRate : this.state.instructorRating
+      }).then((res) => {
         //console.log(res);
             this.onQueried(res);
         })
@@ -30,9 +34,10 @@ export default class CommentAdder extends Component {
         return (
             <div>
                 <div> <input id="courseIDInputBox" type="text" onChange={(event) => {this.setState({courseID : event.target.value})}} placeholder="Couse ID . . ." /> </div>
-                <div> <input id="courseNameInputBox" type="text" onChange={(event) => {this.setState({CourseName : event.target.value})}} placeholder="Course Name . . ." /> </div>
                 <div> <input id="secNoInputBox" type="text" onChange={(event) => {this.setState({secNo:event.target.value})}} placeholder="Sec No . . ."/></div>
                 <div> <input id="commentInputBox" type="text" className="form-control" onChange={(event) => {this.setState({commentText:event.target.value})}} placeholder="Comment . . ."/> </div>
+                <div> <input id="courseRatingBox" type="text" onChange={(event) => {this.setState({commentText:event.target.value})}} placeholder="Comment . . ."/> </div>
+                <div> <input id="instructorRatingBox" type="text" onChange={(event) => {this.setState({commentText:event.target.value})}} placeholder="Comment . . ."/> </div>
                 <button className="btn btn-success" onClick={this.onSubmit}>บันทึกการประเมิน</button>
             </div>
 

@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 
-export default class ClassTimetable extends Component {
-   
+export default class CourseInfoTable extends Component {
+
     render() {
         
         if (this.props.data === null){
             return null;
         }else{
             let myData = this.props.data.data;
-          
+            
             return (
                 <div>
                     <table>
@@ -18,19 +18,19 @@ export default class ClassTimetable extends Component {
                             {
                                 myData.map(row => (
                                     <tr>
-                                        <div>Course ID : {row.CourseID}</div>
-                                        <div>Section : {row.SecNo}</div>
-                                        <div>Day : {row.day}</div>
-                                        <div>Time : {row.startTime} - {row.endTime}</div>
-                                        <div>Building : {row.Bcode} </div>
-                                        <div>Floor : {row.Floor} </div>
-                                        <div>Room : {row.RoomNo} </div>
+                                        <div>Certificate : {row.Cname}</div>
+                                        <div>Issued Date : {row.issuedDate}</div>
+                                        <div>Faculty : {row.Fcode}</div>
+                                        <div>Student ID : {row.StudentID}</div>
                                     </tr>
                                 ))
                             }
                         </tbody>
                     </table>
                 </div>
+
+
+
             );
         }
     }

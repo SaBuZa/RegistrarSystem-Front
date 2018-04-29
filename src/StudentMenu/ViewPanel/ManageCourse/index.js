@@ -21,7 +21,7 @@ export default class ManageCourse extends Component {
     
     queryInfo = () => {
         var qstring = '/viewregistercurrent';
-        axios.get(qstring)
+        axios.post(qstring)
         .then((res) => {
             this.onQueried(res);
         });
