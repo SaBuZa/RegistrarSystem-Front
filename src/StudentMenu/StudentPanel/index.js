@@ -10,7 +10,7 @@ export default class StudentPanel extends Component {
             <div> Menu Page (Student) </div>
             <div><button className="btn btn-default" onClick={ () =>{ this.props.changeState({page:'StudentInformation'})}}>ข้อมูลนักศึกษา</button></div>
             <div><button className="btn btn-default" onClick={ () =>{ this.props.changeState({page:'RegisterCourse'})}}>ลงทะเบียนรายวิชา</button></div>
-            <div><button className="btn btn-default" onClick={ () =>{ this.props.changeState({page:'ManageCourse'})}}>เพิ่ม ลด ถอน รายวิชา</button></div>
+            <div><button className="btn btn-default" onClick={ () =>{ this.props.changeState({page:'ManageCourse'})}}>ลด ถอน รายวิชา</button></div>
             <div><button className="btn btn-default" onClick={ () =>{ this.props.changeState({page:'ClassInformation'})}}>ดูตารางเรียน</button></div>
             <div><button className="btn btn-default" onClick={ () =>{ this.props.changeState({page:'ExamInformation'})}}>ดูตารางสอบ</button></div>
             <div><button className="btn btn-default" onClick={ () =>{ this.props.changeState({page:'GradeInformation'})}}>ดูเกรดรายวิชา</button></div>
