@@ -2,6 +2,9 @@ import React, {Component} from 'react';
 
 
 export default class ExamTimetable extends Component{
+
+    dayMap = ['','SUN','MON','TUE','WED','THU','FRI','SAT'];
+
     render(){
 
         if (this.props.data === null){
@@ -10,14 +13,15 @@ export default class ExamTimetable extends Component{
             let myData = this.props.data.data;
           
             return (
-                <div>
-                    <table>
+                <div className="container">
+                    <table className="table table-bordered">
                         <thead>
                         </thead>
                         <tbody>
                             {
                                 myData.map(row => (
                                     <tr>
+                                        <td>
                                         <div>Course ID : {row.CourseID}</div>
                                         <div>Course Name : {row.CourseName}</div>
                                         <div>Date : {row.date}</div>
@@ -26,6 +30,7 @@ export default class ExamTimetable extends Component{
                                         <div>Floor : {row.Floor} </div>
                                         <div>Room : {row.RoomNo} </div>
                                         <div>Exam Type : {row.Type} </div>
+                                        </td>
                                     </tr>
                                 ))
                             }

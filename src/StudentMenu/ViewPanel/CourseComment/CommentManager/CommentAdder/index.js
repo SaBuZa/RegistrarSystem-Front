@@ -20,7 +20,7 @@ export default class CommentAdder extends Component {
        var qstring = '/commentadd';
        axios.post(qstring,{
         CourseID : this.state.courseID,
-        secNo : this.state.secNo,
+        SecNo : this.state.secNo,
         commentText : this.state.commentText,
         cRate : this.state.courseRating,
         iRate : this.state.instructorRating
@@ -36,8 +36,8 @@ export default class CommentAdder extends Component {
                 <div> <input id="courseIDInputBox" type="text" onChange={(event) => {this.setState({courseID : event.target.value})}} placeholder="Couse ID . . ." /> </div>
                 <div> <input id="secNoInputBox" type="text" onChange={(event) => {this.setState({secNo:event.target.value})}} placeholder="Sec No . . ."/></div>
                 <div> <input id="commentInputBox" type="text" className="form-control" onChange={(event) => {this.setState({commentText:event.target.value})}} placeholder="Comment . . ."/> </div>
-                <div> <input id="courseRatingBox" type="text" onChange={(event) => {this.setState({commentText:event.target.value})}} placeholder="Comment . . ."/> </div>
-                <div> <input id="instructorRatingBox" type="text" onChange={(event) => {this.setState({commentText:event.target.value})}} placeholder="Comment . . ."/> </div>
+                <div> <input id="courseRatingBox" type="text" onChange={(event) => {this.setState({courseRating:event.target.value})}} placeholder="Course Rating . . ."/> </div>
+                <div> <input id="instructorRatingBox" type="text" onChange={(event) => {this.setState({instructorRating:event.target.value})}} placeholder="Instructor Rating . . ."/> </div>
                 <button className="btn btn-success" onClick={this.onSubmit}>บันทึกการประเมิน</button>
             </div>
 
