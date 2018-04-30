@@ -5,6 +5,7 @@ import LogoutButton from './LogoutButton';
 export default class StudentPanel extends Component {
     
     //<div><button className="btn btn-default" onClick={ () =>{ this.props.changeState({page:'TranscriptRequest'})}}>ขอ Transcript</button></div>
+    //<button className="btn btn-default" onClick={ () =>{ this.props.changeState({page:'GradeInformation'})}}>ดูเกรดรายวิชา</button>
     render(){
         return (
             <div>
@@ -15,7 +16,6 @@ export default class StudentPanel extends Component {
                 <button className="btn btn-default" onClick={ () =>{ this.props.changeState({page:'ManageCourse'})}}>ลด ถอน รายวิชา</button>
                 <button className="btn btn-default" onClick={ () =>{ this.props.changeState({page:'ClassInformation'})}}>ดูตารางเรียน</button>
                 <button className="btn btn-default" onClick={ () =>{ this.props.changeState({page:'ExamInformation'})}}>ดูตารางสอบ</button>
-                <button className="btn btn-default" onClick={ () =>{ this.props.changeState({page:'GradeInformation'})}}>ดูเกรดรายวิชา</button>
                 <button className="btn btn-default" onClick={ () =>{ this.props.changeState({page:'DocumentRequest'})}}>ขอใบรับรอง</button>
                 <button className="btn btn-default" onClick={ () =>{ this.props.changeState({page:'RegistrationInformation'})}}>ตรวจสอบผลการลงทะเบียน</button>
                 <button className="btn btn-default" onClick={ () =>{ this.props.changeState({page:'CourseComment'})}}>ประเมินรายวิชา</button>
