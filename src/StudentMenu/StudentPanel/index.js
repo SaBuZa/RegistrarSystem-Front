@@ -2,15 +2,17 @@ import React, { Component } from 'react';
 
 import LogoutButton from './LogoutButton';
 
+import "./StudentPanel.css"
+
 export default class StudentPanel extends Component {
     
     //<div><button className="btn btn-default" onClick={ () =>{ this.props.changeState({page:'TranscriptRequest'})}}>ขอ Transcript</button></div>
     //<button className="btn btn-default" onClick={ () =>{ this.props.changeState({page:'GradeInformation'})}}>ดูเกรดรายวิชา</button>
     render(){
         return (
-            <div>
-            <div> Menu Page (Student) </div>
+            <div className="panel-background">
             <div className="btn-group-vertical btn-group-sm">
+            <div> Menu Page (Student) </div>
                 <button className="btn btn-default" onClick={ () =>{ this.props.changeState({page:'StudentInformation'})}}>ข้อมูลนักศึกษา</button>
                 <button className="btn btn-default" onClick={ () =>{ this.props.changeState({page:'RegisterCourse'})}}>ลงทะเบียนรายวิชา</button>
                 <button className="btn btn-default" onClick={ () =>{ this.props.changeState({page:'ManageCourse'})}}>ลด ถอน รายวิชา</button>

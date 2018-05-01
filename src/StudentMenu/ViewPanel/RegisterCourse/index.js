@@ -36,6 +36,7 @@ export default class RegisterCourse extends Component {
                 console.log("Register course : Failed !");
                 return ;
             }*/
+            window.alert("Success !");
             console.log(res);
         })
         .catch((err) => {

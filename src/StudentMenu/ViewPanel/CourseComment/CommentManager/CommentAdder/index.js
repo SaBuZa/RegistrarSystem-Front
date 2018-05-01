@@ -27,6 +27,7 @@ export default class CommentAdder extends Component {
       }).then((res) => {
         //console.log(res);
             this.onQueried(res);
+            window.alert("Comment Success !");
         })
     }
 

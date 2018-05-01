@@ -19,6 +19,7 @@ export default class CourseManager extends Component {
        axios.get(qstring).then((res) => {
         //console.log(res);
             this.onQueried(res);
+            window.alert("Drop Success !");
         })
     }
 
